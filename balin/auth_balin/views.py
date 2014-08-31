@@ -10,16 +10,18 @@ from django.contrib.auth.models import User
 
 from eztables.views import DatatablesView
 
+from braces.views import LoginRequiredMixin
+
 from balin.auth_balin.forms import CreateUserForm, ChangeUserForm
 from balin.utils.views.mixins import SuccessDeleteMessageMixin
 
 
-class UserListView(ListView):
+class UserListView(LoginRequiredMixin, ListView):
     model = User
     template_name = "auth_balin/user_list.html"
 
 
-class UserCreateView(SuccessMessageMixin, CreateView):
+class UserCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = CreateUserForm
     template_name = "auth_balin/user_form.html"
     success_message = _("User %(first_name)s %(last_name)s was "
@@ -27,7 +29,7 @@ class UserCreateView(SuccessMessageMixin, CreateView):
     success_url = reverse_lazy('auth_balin:list')
 
 
-class UserUpdateView(SuccessMessageMixin, UpdateView):
+class UserUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = User
     form_class = ChangeUserForm
     template_name = "auth_balin/user_update.html"
@@ -36,7 +38,8 @@ class UserUpdateView(SuccessMessageMixin, UpdateView):
     success_url = reverse_lazy('auth_balin:list')
 
 
-class UserDeleteView(SuccessDeleteMessageMixin, DeleteView):
+class UserDeleteView(LoginRequiredMixin, SuccessDeleteMessageMixin,
+                     DeleteView):
     model = User
     template_name = "auth_balin/user_confirm_delete.html"
     success_message = _("User was removed successfully")
