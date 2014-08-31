@@ -54,7 +54,6 @@ THIRD_PARTY_APPS = (
     'widget_tweaks',
     'djangojs',
     'eztables',
-    'collectfast',
 )
 
 LOCAL_APPS = (
