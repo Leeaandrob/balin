@@ -1,1 +1,1 @@
-web: gunicorn balin.wsgi:application -b 0.0.0.0:8000
+web: gunicorn -b "0.0.0.0:$PORT" -w 4 balin.wsgi:application
