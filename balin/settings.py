@@ -49,7 +49,6 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     'south',
-    'gunicorn',
     'storages',
     'crispy_forms',
     'widget_tweaks',
@@ -132,7 +131,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-if DEBUG is True:
+if DEBUG is False:
     DEFAULT_FILE_STORAGE = 'balin.s3utils.MediaRootS3BotoStorage'
     STATICFILES_STORAGE = 'balin.s3utils.StaticRootS3BotoStorage'
 
