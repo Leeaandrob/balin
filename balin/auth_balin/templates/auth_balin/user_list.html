@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load staticfiles eztables %}
+
+{% block header_title %}Usuários{% endblock header_title %}
+
+{% block styles %}
+    {{ block.super }}
+    <link href="{% static 'css/tables.css' %}" rel="stylesheet">
+    <link href="{% static 'css/plugins/dataTables.bootstrap.css' %}" rel="stylesheet">
+{% endblock styles %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered table-hover datatable">
+                    <thead>
+                        <tr>
+                            <th>Opções</th>
+                            <th>Nome</th>
+                            <th>Login</th>
+                            <th>E-mail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for user in object_list %}
+                            <tr>
+                                <td width="20%">
+                                    <a href="{% url 'auth_balin:update' pk=user.pk %}" class="btn btn-sm btn-default">
+                                        <i class="fa fa-pencil"></i> Editar
+                                    </a>
+                                    <a href="{% url 'auth_balin:delete' pk=user.pk %}" class="btn btn-sm btn-danger">
+                                        <i class="fa fa-pencil"></i> Excluir
+                                    </a>
+                                </td>
+                                <td>{{ user.get_full_name }} </td>
+                                <td>{{ user.username }}</td>
+                                <td>{{ user.email }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="well">
+                <a href="{% url 'auth_balin:create' %}" class="btn btn-lg btn-success">Novo Usuário</a> ou
+                <a href="#" class="btn btn-lg btn-default">Voltar</a>
+            </div>
+        </div>
+    </div>
+{% endblock main %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'js/plugins/dataTables/jquery.dataTables.js' %}"></script>
+    <script src="{% static 'js/plugins/dataTables/dataTables.bootstrap.js' %}"></script>
+    <script src="{% static 'js/dataTable.balin.js' %}"></script>
+    <script>
+        dataTable('auth_balin:create');
+    </script>
+{% endblock scripts %}

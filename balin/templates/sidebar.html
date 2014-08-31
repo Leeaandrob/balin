@@ -1,0 +1,77 @@
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="sidebar-search">
+                <div class="input-group custom-search-form">
+                    <input type="text" class="form-control" placeholder="Search...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+                </div>
+                <!-- /input-group -->
+            </li>
+            <li>
+                <a class="active" href="index.html"><i class="fa fa-dashboard fa-fw"></i> Painel</a>
+            </li>
+            <li> <a href="tables.html"><i class="fa fa-child"></i> Alunos</a> </li>
+            <li> <a href="forms.html"><i class="fa fa-sitemap"></i> Cursos</a> </li>
+            <li>
+                <a href="#"><i class="fa fa-university"></i> Turmas<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li> <a href="panels-wells.html"><i class="fa fa-arrow-circle-right"></i> Inserir Turma</a> </li>
+                    <li> <a href="buttons.html"><i class="fa fa-arrow-circle-right"></i> Troca de Turma</a> </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-list-alt"></i> Matrícula<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li> <a href="panels-wells.html"><i class="fa fa-arrow-circle-right"></i> Efetuar matrícula</a> </li>
+                    <li> <a href="buttons.html"><i class="fa fa-arrow-circle-right"></i> Trancar matrícula</a> </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+
+            <li>
+                <a href="#"><i class="fa fa-file-text-o"></i> Boletos<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="blank.html"><i class="fa fa-arrow-circle-right"></i> Emissão de boletos</a> </li>
+                    <li><a href="login.html"><i class="fa fa-arrow-circle-right"></i> Boletos avulsos</a> </li>
+                    <li><a href="login.html"><i class="fa fa-arrow-circle-right"></i> Edição de boletos</a> </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-bar-chart-o"></i> Relatórios<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li> <a href="flot.html"><i class="fa fa-arrow-circle-right"></i> Inadimplentes</a> </li>
+                    <li> <a href="morris.html"><i class="fa fa-arrow-circle-right"></i> Notas e Faltas</a> </li>
+                    <li> <a href="morris.html"><i class="fa fa-arrow-circle-right"></i> Alunos Faltosos</a> </li>
+                    <li> <a href="morris.html"><i class="fa fa-arrow-circle-right"></i> Contas a Pagar</a> </li>
+                    <li> <a href="morris.html"><i class="fa fa-arrow-circle-right"></i> Contas a Receber</a> </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-group"></i> Funcionários<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li> <a href="blank.html"><i class="fa fa-arrow-circle-right"></i> Inserir Funcionário</a> </li>
+                    <li> <a href="login.html"><i class="fa fa-arrow-circle-right"></i> Desligar Funcionário</a> </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-graduation-cap"></i> Professores<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li> <a href="blank.html"><i class="fa fa-arrow-circle-right"></i> Inserir Professor</a> </li>
+                    <li> <a href="login.html"><i class="fa fa-arrow-circle-right"></i> Desligar Professor</a> </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+            <li><a href="{% url 'auth_balin:list' %}"><i class="fa fa-user"></i> Usuários</a></li>
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>

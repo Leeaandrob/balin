@@ -1,12 +1,26 @@
 from django.conf.urls import patterns, url
 from django.contrib.auth import views as auth_views
 
+from balin.auth_balin.views import (
+    UserListView, UserCreateView, UserUpdateView, UserDeleteView
+)
+
+
+# Routes of contrib.auth
 urlpatterns = patterns(
     '',
+    url(r'users/$', UserListView.as_view(), name='list'),
+    url(r'user/create/$', UserCreateView.as_view(), name='create'),
+    url(r'user/(?P<pk>\d+)/update/$',
+        UserUpdateView.as_view(), name='update'),
+    url(r'user/(?P<pk>\d+)/delete/$',
+        UserDeleteView.as_view(), name='delete'),
+
     url(r'^login/$', auth_views.login,
         {'template_name': 'registration/login.html'},
         name='login'),
-    url(r'^logout/$', 'django.contrib.auth.views.logout', name='logout'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout',
+        {'next_page': '/login/'}, name='logout'),
     url(r'^password_change/$', 'django.contrib.auth.views.password_change',
         name='password_change'),
     url(r'^password_change/done/$',

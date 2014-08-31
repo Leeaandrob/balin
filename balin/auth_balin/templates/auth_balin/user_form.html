@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block header_title %}Novo usuário{% endblock header_title %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-lg-12">
+            {% crispy form %}
+        </div>
+    </div>
+{% endblock main %}

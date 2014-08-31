@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-31 12:15-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: forms.py:20 forms.py:80
+msgid "Email address"
+msgstr "Endereço de E-mail"
+
+#: forms.py:24 forms.py:84
+msgid "Set as Administrator"
+msgstr "Definir como Administrador"
+
+#: forms.py:26 forms.py:86
+msgid "Define user to Administrador and access all funcionalities of system"
+msgstr ""
+"Define o usuário para Administrador e acessar todas as funcionalidades do "
+"sistema"
+
+#: views.py:25
+#, python-format
+msgid "User %(first_name)s %(last_name)s was created successfully"
+msgstr "Usuário %(first_name)s %(last_name)s foi criado com sucesso"
+
+#: views.py:34
+#, python-format
+msgid "User %(first_name)s %(last_name)s was updated successfully"
+msgstr "Usuário %(first_name)s %(last_name)s foi atualizado com sucesso"
+
+#: views.py:42
+msgid "User was removed successfully"
+msgstr "Usuário foi removido com sucesso"

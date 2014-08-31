@@ -53,9 +53,12 @@ THIRD_PARTY_APPS = (
     'storages',
     'crispy_forms',
     'widget_tweaks',
+    'djangojs',
+    'eztables',
 )
 
 LOCAL_APPS = (
+    'balin.core',
     'balin.auth_balin',
 )
 
@@ -138,6 +141,13 @@ SOUTH_TESTS_MIGRATE = False
 
 # Django Crispy Forms
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# Django messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger',
+}
+
 
 # Cache
 CACHES = {
